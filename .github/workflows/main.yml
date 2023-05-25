@@ -1,18 +1,40 @@
-name: Publish Package to npmjs
-on:
-  release:
-    types: [published]
+# name: Publish Package to npmjs
+# on:
+#   release:
+#     types: [published]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       # Setup .npmrc file to publish to npm
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '16.x'
+#           registry-url: 'https://registry.npmjs.org'
+#       - run: npm ci
+#       - run: npm publish
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+name: Semantic release 
+
+on: push
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm publish
+          node-version: 12
+      - name: Install dependencies
+        run: npm install 
+      - name: Build app
+        run: npm run build 
+      - name: Semantic release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
