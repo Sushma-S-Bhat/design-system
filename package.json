@@ -38,6 +38,5 @@
     "storybook": "^7.0.16"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "storybook@0.1.0",
-  "release": { "branches": [ "master" ] }
+  "_id": "storybook@0.1.0"
 }
