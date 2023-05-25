@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "version": "0.1.0",
-  "main":"dist/index.js",
+  "main": "dist/index.js",
   "files": [
     "src/**"
   ],
@@ -22,7 +22,8 @@
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "storybook-source-code-addon": "^1.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.16",
@@ -35,9 +36,14 @@
     "chromatic": "^6.17.4",
     "eslint-plugin-storybook": "^0.6.12",
     "semantic-release": "^21.0.2",
-    "storybook": "^7.0.16"
+    "storybook": "^7.0.16",
+    "storybook-addon-code-preview": "^0.0.9"
   },
   "readme": "ERROR: No README data found!",
   "_id": "storybook@0.1.0",
-  "release": { "branches": [ "master" ] }
+  "release": {
+    "branches": [
+      "master"
+    ]
+  }
 }

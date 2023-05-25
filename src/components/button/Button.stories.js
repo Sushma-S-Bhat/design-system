@@ -10,6 +10,12 @@ export default {
     },
     args:{
       label:'Button'
+    },
+    parameters: {
+      componentSource: {
+        code: Button,
+        language: 'javascript',
+      }
     }
   },
 };
