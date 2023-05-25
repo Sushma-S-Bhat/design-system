@@ -1,6 +1,10 @@
 {
   "name": "storybook",
   "version": "0.1.0",
+  "main":"dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

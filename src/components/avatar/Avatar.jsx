@@ -19,6 +19,5 @@ export const Avatar = ({ variant='circular', size, ...props }) => {
   Avatar.defaultProps = {
     variant:'circular',
     size: 'medium',
-    onClick: undefined,
   };
   
