@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export const Avatar = ({ variant='circular', size, ...props }) => {
     // const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
     return (
-      <MuiAvatar variant={variant} size={size}>{label}</MuiAvatar>
+      <MuiAvatar variant={variant} size={size}></MuiAvatar>
     );
   };
   
