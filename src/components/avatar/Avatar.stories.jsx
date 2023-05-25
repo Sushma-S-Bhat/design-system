@@ -18,4 +18,8 @@ export const Square = {
    variant:'square',
   },
 };
-
+export const Rounded = {
+    args: {
+     variant:'rounded',
+    },
+  };
