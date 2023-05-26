@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Typography = ({ variant, component, ...props }) => {
-  return <Typography variant={variant} component={component}></Typography>;
+  return <MuiTypography variant={variant} component={component}></MuiTypography>;
 };
 
 Typography.propTypes = {
